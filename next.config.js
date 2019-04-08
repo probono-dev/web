@@ -4,6 +4,7 @@ const withFonts = require('next-fonts');
 const withCSS = require('@zeit/next-css');
 
 const config = withCSS({
+  target: 'serverless',
   webpack(config, options) {
     config.module.rules.push({
       test: /\.ts(x)$/,
