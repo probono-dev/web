@@ -1,5 +1,6 @@
 {
   "name": "probono-web-client",
+  "alias": "probono.dev",
   "env": {
     "NODE_ENV": "production"
   },
