@@ -7,9 +7,10 @@ import Logo from '../components/Logo';
 import Head from 'next/head';
 
 const Main = styled.main`
-  max-width: 34.8rem;
-  margin: auto;
-  padding-top: ${rhythm(5)};
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${rhythm(24)};
+  padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
 `;
 
 const SiteHeader = styled.h1`

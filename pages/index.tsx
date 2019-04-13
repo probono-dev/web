@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from 'linaria/react';
 import Div from 'react-div-100vh';
-import Logo from '../components/Logo';
+import Logo from '../components/AnimatedLogo';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -16,8 +16,6 @@ const Headline = styled.h1`
   font-size: 3em;
 `;
 
-const Text = styled.p``;
-
 export default () => (
   <>
     <Head>
@@ -26,7 +24,7 @@ export default () => (
     <Container>
       <Logo width="10em" height="12em" />
       <Headline>ProBono</Headline>
-      <Text>Connecting charitable talent with causes in need.</Text>
+      <p>Connecting charitable talent with causes in need.</p>
       <p>
         <Link href="/connect">
           <a href="/connect">See How</a>

@@ -7,7 +7,7 @@ const config = withCSS({
   target: 'serverless',
   webpack(config, options) {
     config.module.rules.push({
-      test: /\.ts(x)$/,
+      test: /\.tsx?$/,
       use: [
         {
           loader: 'linaria/loader',
