@@ -68,6 +68,8 @@ app.prepare().then(() => {
 
   registerHandler(server, '/connect');
 
+  server.use(express.static('static'));
+
   // Let Next JS handle all other routes too
   server.get('*', (req, res) => {
     return handle(req, res);
