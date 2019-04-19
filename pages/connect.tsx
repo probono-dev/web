@@ -4,7 +4,7 @@ import { scale, rhythm } from '../style/theme';
 import Link from 'next/link';
 
 import Logo from '../components/Logo';
-import Head from 'next/head';
+import { Seo } from '../components/Seo';
 
 const Main = styled.main`
   margin-left: auto;
@@ -43,9 +43,10 @@ const Headline = styled.p`
 
 export default () => (
   <>
-    <Head>
-      <title>Connect with ProBono</title>
-    </Head>
+    <Seo
+      title="Connect with ProBono"
+      description="Help us help thousands of organisations around the world make a difference"
+    />
     <Main>
       <SiteHeader>
         <Link href={`/`}>

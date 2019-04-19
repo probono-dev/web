@@ -2,6 +2,7 @@ const withTypescript = require('@zeit/next-typescript');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const withFonts = require('next-fonts');
 const withCSS = require('@zeit/next-css');
+const withImages = require('next-images');
 
 const config = withCSS({
   target: 'serverless',
@@ -21,4 +22,4 @@ const config = withCSS({
   },
 });
 
-module.exports = withFonts(withTypescript(config));
+module.exports = withImages(withFonts(withTypescript(config)));

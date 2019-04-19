@@ -3,13 +3,14 @@ import { styled } from 'linaria/react';
 import Div from 'react-div-100vh';
 import Logo from '../components/AnimatedLogo';
 import Link from 'next/link';
-import Head from 'next/head';
+import { Seo } from '../components/Seo';
 
 const Container = styled(Div)`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 100vh;
 `;
 
 const Headline = styled.h1`
@@ -18,9 +19,10 @@ const Headline = styled.h1`
 
 export default () => (
   <>
-    <Head>
-      <title>ProBono</title>
-    </Head>
+    <Seo
+      title="ProBono"
+      description="Connecting charitable talent with causes in need"
+    />
     <Container>
       <Logo width="10em" height="12em" />
       <Headline>ProBono</Headline>
