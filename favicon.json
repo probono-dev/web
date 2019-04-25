@@ -48,7 +48,7 @@
     }
   },
   "settings": {
-    "compression": 2,
+    "compression": 1,
     "scalingAlgorithm": "Mitchell",
     "errorOnImageTooSmall": false,
     "readmeFile": false,
