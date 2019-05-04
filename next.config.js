@@ -4,8 +4,10 @@ const withFonts = require('next-fonts');
 const withCSS = require('@zeit/next-css');
 const withImages = require('next-images');
 
+const { DEPLOYMENT_TARGET } = process.env;
+
 const config = withCSS({
-  target: 'serverless',
+  target: DEPLOYMENT_TARGET,
   webpack(config, options) {
     config.module.rules.push({
       test: /\.tsx?$/,
