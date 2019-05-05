@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import posed from 'react-pose';
 
-export type AnimatedLogoProps = {
+interface SvgComponentProps extends React.SVGProps<SVGSVGElement> {
   svgRef: React.Ref<any>;
-};
+}
 
 const Path = posed.path({
   visible: {
@@ -12,9 +12,9 @@ const Path = posed.path({
     transition: {
       y: {
         type: 'tween',
-        ease: 'easeInOut'
-      }
-    }
+        ease: 'easeInOut',
+      },
+    },
   },
   hidden: {
     opacity: 0,
@@ -32,7 +32,7 @@ const Svg = posed.svg({
   },
 });
 
-const SvgComponent = ({ svgRef, ...props }: AnimatedLogoProps) => {
+const SvgComponent = ({ svgRef, ...props }: SvgComponentProps) => {
   const [pose, setPose] = useState('hidden');
 
   useEffect(() => {
@@ -74,7 +74,9 @@ const SvgComponent = ({ svgRef, ...props }: AnimatedLogoProps) => {
   );
 };
 
-const ForwardRef = React.forwardRef((props, ref) => (
-  <SvgComponent svgRef={ref} {...props} />
-));
+const ForwardRef = React.forwardRef<
+  SvgComponentProps,
+  React.SVGProps<SVGSVGElement>
+>((props, ref) => <SvgComponent svgRef={ref} {...props} />);
+
 export default ForwardRef;

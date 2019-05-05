@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from 'linaria/react';
+import { styled, CSSProperties } from 'linaria/react';
 import { scale, rhythm } from '../style/theme';
 import Link from 'next/link';
 
@@ -14,7 +14,7 @@ const Main = styled.main`
 `;
 
 const SiteHeader = styled.h1`
-  ${scale(2)};
+  ${(scale(2) as unknown) as CSSProperties};
   margin-bottom: ${rhythm(5)};
   margin-top: 0;
   text-align: center;
@@ -28,14 +28,14 @@ const SiteLink = styled.a`
 `;
 
 const Text = styled.p`
-  ${scale(0.3)};
+  ${(scale(0.3) as unknown) as CSSProperties};
   text-align: center;
   margin-top: ${rhythm(5)};
   margin-bottom: ${rhythm(5)};
 `;
 
 const Headline = styled.p`
-  ${scale(1)};
+  ${(scale(1) as unknown) as CSSProperties};
   text-align: center;
   margin-top: ${rhythm(5)};
   margin-bottom: ${rhythm(5)};

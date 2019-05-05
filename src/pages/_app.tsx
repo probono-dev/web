@@ -1,15 +1,17 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import App, { Container, NextAppContext } from 'next/app';
 import { TypographyStyle } from 'react-typography';
+import Head from 'next/head';
 
-import typography from '../style/theme'
+import { Favicons } from '../components/Favicons';
+import typography from '../style/theme';
 
 import 'typeface-nunito';
 import 'typeface-rubik';
 import '../global.css';
 
 class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
+  public static async getInitialProps({ Component, ctx }: NextAppContext) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -19,12 +21,15 @@ class MyApp extends App {
     return { pageProps };
   }
 
-  render() {
+  public render() {
     const { Component, pageProps } = this.props;
 
     return (
       <Container>
-        <TypographyStyle typography={typography}/>
+        <Head>
+          <Favicons />
+        </Head>
+        <TypographyStyle typography={typography} />
         <Component {...pageProps} />
       </Container>
     );

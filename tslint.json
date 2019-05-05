@@ -1,0 +1,11 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint:latest", "tslint-config-prettier"],
+    "rules": {
+        "ordered-imports": false,
+        "object-literal-sort-keys": false,
+        "interface-name": false,
+        "no-submodule-imports": [true, "linaria/react", "next/link", "next/app", "next/document", "next/head"],
+        "no-unused-variable": true
+    }
+}
