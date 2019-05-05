@@ -1,14 +1,9 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-
-import { Favicons } from '../components/Favicons';
+import Document, { Html, Main, NextScript } from 'next/document';
 
 class ProBonoDocument extends Document {
   public render() {
     return (
       <Html lang="en">
-        <Head>
-          <Favicons />
-        </Head>
         <body>
           <Main />
           <NextScript />

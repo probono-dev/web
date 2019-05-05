@@ -1,7 +1,9 @@
 import React from 'react';
 import App, { Container, NextAppContext } from 'next/app';
 import { TypographyStyle } from 'react-typography';
+import Head from 'next/head';
 
+import { Favicons } from '../components/Favicons';
 import typography from '../style/theme';
 
 import 'typeface-nunito';
@@ -24,6 +26,9 @@ class MyApp extends App {
 
     return (
       <Container>
+        <Head>
+          <Favicons />
+        </Head>
         <TypographyStyle typography={typography} />
         <Component {...pageProps} />
       </Container>

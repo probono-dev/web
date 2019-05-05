@@ -5,7 +5,7 @@
         "ordered-imports": false,
         "object-literal-sort-keys": false,
         "interface-name": false,
-        "no-submodule-imports": [true, "linaria/react", "next/link", "next/app", "next/document"],
+        "no-submodule-imports": [true, "linaria/react", "next/link", "next/app", "next/document", "next/head"],
         "no-unused-variable": true
     }
 }
