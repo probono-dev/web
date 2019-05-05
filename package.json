@@ -27,11 +27,9 @@
     "typography": "0.16.19"
   },
   "scripts": {
-    "dev": "ts-node --project server.tsconfig.json src/server.ts",
-    "build": "next build",
-    "start": "cross-env NODE_ENV=production DEPLOYMENT_TARGET=serverless ts-node --project server.tsconfig.json src/server.ts",
-    "generate:favicons": "real-favicon generate favicon.json faviconData.json static",
-    "test:start": "cross-env NODE_ENV=production DEPLOYMENT_TARGET=server ts-node --project server.tsconfig.json src/server.ts",
+    "dev": "next dev src",
+    "now-build": "next build src",
+    "generate:favicons": "real-favicon generate favicon.json faviconData.json src/static",
     "test": "echo \"No tests specified yet.\"",
     "lint": "tslint -c tslint.json \"src/**/*.ts\" -t verbose -p tsconfig.json"
   },
