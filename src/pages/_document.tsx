@@ -2,8 +2,8 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 import { Favicons } from '../components/Favicons';
 
-class MyDocument extends Document {
-  render() {
+class ProBonoDocument extends Document {
+  public render() {
     return (
       <Html lang="en">
         <Head>
@@ -18,4 +18,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument;
+export default ProBonoDocument;
