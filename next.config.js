@@ -3,10 +3,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const withFonts = require('next-fonts');
 const withCSS = require('@zeit/next-css');
 const withImages = require('next-images');
+const {
+  resolve
+} = require('path');
 
 const config = {
   target: 'serverless',
-  distDir: __dirname + '/.next',
+  distDir: '../.next',
   webpack(config, options) {
     config.module.rules.push({
       test: /\.tsx?$/,
