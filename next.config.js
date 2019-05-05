@@ -6,6 +6,7 @@ const withImages = require('next-images');
 
 const config = {
   target: 'serverless',
+  distDir: __dirname + '/.next',
   webpack(config, options) {
     config.module.rules.push({
       test: /\.tsx?$/,
