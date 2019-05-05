@@ -1,12 +1,13 @@
 import * as express from 'express';
 import * as next from 'next';
 import * as compression from 'compression';
+import { join } from 'path';
 
 const { PORT = '3000' } = process.env;
 
 const port = parseInt(PORT, 10);
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
+const app = next({ dev, dir: './src' });
 const handle = app.getRequestHandler();
 
 /**
@@ -22,7 +23,7 @@ const handle = app.getRequestHandler();
  * Our route definition will look like this:
  *
  * ```js
- * createHandler(server, '/projects/:projectId/by/:userId');
+ * registerHandler(server, '/projects/:projectId/by/:userId');
  * ```
  *
  * and our corresponding component can get these props:
@@ -68,7 +69,7 @@ app.prepare().then(() => {
 
   registerHandler(server, '/connect');
 
-  server.use('/', express.static('static'));
+  server.use('/', express.static(join(__dirname, '../static')));
 
   // Let Next JS handle all other routes too
   server.get('*', (req, res) => {
@@ -77,6 +78,7 @@ app.prepare().then(() => {
 
   // Tell the server to listen to requests at specified port
   server.listen(port, () => {
+    // tslint:disable no-console
     console.log(`> Ready on port: ${port} 🚀`);
   });
 });
