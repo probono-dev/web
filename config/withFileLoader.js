@@ -4,15 +4,15 @@ module.exports = withFileLoader = test => extraConfig => {
         webpack(config, options) {
             if (extraConfig.webpack) {
                 extraConfig.webpack(config, options);
-                config.module.rules.push({
-                    test,
-                    use: [{
-                        loader: 'file-loader',
-                        options: {},
-                    }, ],
-                });
-                return config;
             }
+            config.module.rules.push({
+                test,
+                use: [{
+                    loader: 'file-loader',
+                    options: {},
+                }, ],
+            });
+            return config;
         },
     };
 };
