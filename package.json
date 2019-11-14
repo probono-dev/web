@@ -19,7 +19,7 @@
     "react": "16.8.6",
     "react-div-100vh": "0.3.4",
     "react-dom": "16.8.6",
-    "react-pose": "4.0.8",
+    "react-pose": "4.0.10",
     "react-typography": "0.16.19",
     "ts-node": "8.3.0",
     "typeface-nunito": "0.0.72",
