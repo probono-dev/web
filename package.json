@@ -38,7 +38,7 @@
     "@types/compression": "0.0.36",
     "@types/express": "4.17.0",
     "@types/next": "8.0.5",
-    "@types/react": "16.8.23",
+    "@types/react": "16.9.12",
     "@types/typography": "0.16.2",
     "@types/react-dom": "16.8.4",
     "cli-real-favicon": "0.0.8",
