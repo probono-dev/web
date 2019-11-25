@@ -42,7 +42,7 @@
     "@types/typography": "0.16.2",
     "@types/react-dom": "16.8.4",
     "cli-real-favicon": "0.0.8",
-    "file-loader": "4.0.0",
+    "file-loader": "5.0.0",
     "tslint": "5.16.0",
     "tslint-config-prettier": "1.18.0"
   }
