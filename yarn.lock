@@ -5282,10 +5282,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-div-100vh@0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/react-div-100vh/-/react-div-100vh-0.3.4.tgz#45507a121e71198d22e24b2b37710393bcf3501e"
-  integrity sha512-1OYEtmZydas/O4VD1tA3t1EgGG67ml9LnyuUTLjVU8CV3FFFq2HfFEMAAIaAUzjNqhuSZ8pV7IDOViUYQ7vjew==
+react-div-100vh@0.3.5:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/react-div-100vh/-/react-div-100vh-0.3.5.tgz#c816ee1d2eceeb20fed9a2e07b50286e74c4a64a"
+  integrity sha512-8I6DXpH/Szyag9EOwO6L4JnRMuP8ZlziZyvA5it43lTToQzG2+dwbSCQZQoxuJfhahaCXHJpE0KFH6XDArhtuQ==
 
 react-dom@16.8.6:
   version "16.8.6"
